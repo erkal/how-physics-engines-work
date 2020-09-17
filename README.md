@@ -1,22 +1,7 @@
 # How Physics Engines Work
 
-Explaining basics of physics engines using elm-playground
+Explaining the basics of physics engines using elm-playground
 
-## How to run the code
-
-You have to have elm installed. If you have yarn installed, you can do it via
-
-```
-yarn global add elm
-```
-
-Then, you can clone the repo and run elm-reactor as follows
-
-```
-git clone https://github.com/erkal/how-physics-engines-work.git
-cd how-physics-engines-work.git
-elm reactor
-```
 
 ---
 
@@ -33,11 +18,28 @@ Some nice links to refresh your memory:
 
 This is **not** the way how the physics engines work.
 
-Example: Moving a ball to right.
+**Example:** Moving a ball to right.
+
+
+### How to run the code
+
+You have to have elm installed. If you have yarn installed, you can do it via
+
+```
+yarn global add elm
+```
+
+Then, you can clone the repo and run elm-reactor as follows
+
+```
+git clone https://github.com/erkal/how-physics-engines-work.git
+cd how-physics-engines-work.git
+elm reactor
+```
 
 ### Advantages
 
-- Static description of animation (position is a function of time). This means time travelleing (also into the future) is possible in an instant
+- Static description of animation (position is a function of time). This means that time-travelling (also into the future) is possible in an instant
 - No need to keep and update positions (or similar animated data) in the model
 - Easily use [easing functions](https://easings.net/)
 
@@ -50,7 +52,7 @@ Example: Moving a ball to right.
 
 ## Animations that simulate Physics in small time steps
 
-Lets talk about this on the moving ball example.
+Let's talk about this on the moving ball example.
 
 1. Moving ball example, this time with physics
 2. Controlling the ball with keyboard (acceleration!)
