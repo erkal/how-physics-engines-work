@@ -30,17 +30,20 @@ Example: Moving a ball to right.
 
 ### Advantages
 
-- static description of animation (position is a function of time)
-- no need to keep and update position in the model
-- easily use easing functions
-- time travelleing (also into the future) is instant
+- Static description of animation (position is a function of time). This means time travelleing (also into the future) is possible in an instant
+- No need to keep and update position in the model
+- Easily use easing functions
 
 ### Disadvantages
 
 - This kind of animation is difficult to interrupt and chain. In games, we want to interrupt animations on user interaction or collision, etc. A nice elm package which deals with this difficult problem: [elm-animator](https://package.elm-lang.org/packages/mdgriffith/elm-animator/latest/)
 - Difficult to manage, if trajectories of moving objects are complex (not straight lines but for example paraboloids)
 
-1. Moving ball example using physics engine
+## Animations that simulate Physics in small time steps
+
+Lets talk about this on an example.
+
+1. Moving ball example with physics
 2. Controlling the ball with keyboard (acceleration!)
 3. Adding friction
 4. Colliding the wall to the right
