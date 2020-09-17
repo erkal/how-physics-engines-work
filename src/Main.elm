@@ -12,14 +12,14 @@ main =
 
 
 type alias Model =
-    { clock : Float
-    , x : Float
+    { x : Float
+    , vx : Float
     }
 
 
 initialModel =
-    { clock = 0
-    , x = 0
+    { x = 0
+    , vx = 0
     }
 
 
@@ -27,13 +27,13 @@ initialModel =
 --  UPDATE
 
 
-dt =
+deltaTime =
     0.016
 
 
 update computer model =
-    { clock = model.clock + dt
-    , x = model.clock * 80
+    { x = model.x + deltaTime * model.vx
+    , vx = model.vx + deltaTime * (toX computer.keyboard * 1000)
     }
 
 
@@ -43,9 +43,8 @@ update computer model =
 
 view : Computer -> Model -> List Shape
 view computer model =
-    [ circle blue 20
+    [ words black "press arrow keys to move the ball"
+        |> moveY 100
+    , circle blue 20
         |> moveX model.x
-    , words black (model.clock |> String.fromFloat |> String.left 4)
-        |> moveY 200
-        |> scale 3
     ]

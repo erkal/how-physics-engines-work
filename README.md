@@ -56,11 +56,10 @@ Let's talk about this on the moving ball example.
 
 1. Moving ball example, this time with physics
 2. Controlling the ball with keyboard (acceleration!)
-3. Adding friction
-4. Colliding the wall to the right
-5. Extending everything above to 2-dimensions
-6. Add gravity
-7. Exercise: Colliding to four walls
+3. Colliding the wall to the right
+4. Extending everything above to 2-dimensions
+5. Add gravity
+6. Exercise: Colliding to four walls
 
 Some useful links:
 
