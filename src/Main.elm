@@ -7,6 +7,10 @@ main =
     game view update initialModel
 
 
+
+-- MODEL
+
+
 type alias Model =
     { clock : Float
     , x : Float
@@ -19,14 +23,22 @@ initialModel =
     }
 
 
+
+--  UPDATE
+
+
+dt =
+    0.016
+
+
 update computer model =
-    let
-        dt =
-            0.016
-    in
     { clock = model.clock + dt
     , x = model.clock * 80
     }
+
+
+
+--  VIEW
 
 
 view : Computer -> Model -> List Shape
