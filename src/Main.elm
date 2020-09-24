@@ -7,6 +7,10 @@ main =
     game view update initialModel
 
 
+floorY =
+    -300
+
+
 
 -- MODEL
 
@@ -76,4 +80,6 @@ view computer model =
     , circle blue 20
         |> moveX model.x
         |> moveY model.y
+    , rectangle brown 1000 30
+        |> moveY floorY
     ]
