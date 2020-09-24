@@ -2,26 +2,9 @@
 
 Explaining the basics of physics engines using elm-playground
 
-
 ---
 
-## Remembering some School Physics
-
-Some nice links to refresh your memory:
-
-- [Calculating speed, distance and time](https://www.bbc.co.uk/bitesize/topics/z83rkqt/articles/zhbtng8#:~:text=The%20formula%20speed%20%3D%20distance%20%C3%B7,distance%20%3D%20speed%20%C3%97%20time)
-- [Speed, velocity and acceleration](https://www.bbc.co.uk/bitesize/guides/z3bqtfr/revision/3)
-
----
-
-## Typical Animations with a Timeline
-
-This is **not** the way how the physics engines work.
-
-**Example:** Moving a ball to right.
-
-
-### How to run the code
+## How to run the code
 
 You have to have elm installed. If you have yarn installed, you can do it via
 
@@ -36,6 +19,30 @@ git clone https://github.com/erkal/how-physics-engines-work.git
 cd how-physics-engines-work.git
 elm reactor
 ```
+
+---
+
+## Remembering some School Physics
+
+- `change in location = change in time * speed`
+- `change in speed = change in time * accelaration`
+- `force = mass * accelaration`
+
+1. What are our units for distance and time?
+2. What are our units for speed and accelaration?
+
+Some nice links to refresh your memory:
+
+- [Calculating speed, distance and time](https://www.bbc.co.uk/bitesize/topics/z83rkqt/articles/zhbtng8#:~:text=The%20formula%20speed%20%3D%20distance%20%C3%B7,distance%20%3D%20speed%20%C3%97%20time)
+- [Speed, velocity and acceleration](https://www.bbc.co.uk/bitesize/guides/z3bqtfr/revision/3)
+
+---
+
+## Typical Animations with a Timeline
+
+This is **not** the way how the physics engines work.
+
+**Example:** Moving a ball to right.
 
 ### Advantages
 
@@ -55,11 +62,15 @@ elm reactor
 Let's talk about this on the moving ball example.
 
 1. Moving ball example, this time with physics
-2. Controlling the ball with keyboard (acceleration!)
-3. Colliding the wall to the right
-4. Extending everything above to 2-dimensions
-5. Add gravity
-6. Exercise: Colliding to four walls
+2. Controlling the ball horizontally with keyboard (acceleration!)
+3. Controll the ball vertically with keyboard
+4. Add gravity
+5. Using vectors
+6. Make the ball bounce on the floor
+7. Exercise: Colliding to four walls
+8. Add gravity centers
+9. Control gravity centers
+10. Make a game out of it
 
 Some useful links:
 
