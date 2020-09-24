@@ -36,10 +36,32 @@ deltaTime =
 
 
 update computer model =
-    { x = model.x + deltaTime * model.vx
-    , y = model.y + deltaTime * model.vy
-    , vx = model.vx + deltaTime * (toX computer.keyboard * 1000)
-    , vy = model.vy + deltaTime * (toY computer.keyboard * 1000)
+    model
+        |> applyKeyboard computer
+        |> gravity
+        |> physics
+
+
+applyKeyboard : Computer -> Model -> Model
+applyKeyboard computer model =
+    { model
+        | vx = model.vx + deltaTime * (toX computer.keyboard * 1000)
+        , vy = model.vy + (deltaTime * (toY computer.keyboard * 1000))
+    }
+
+
+gravity : Model -> Model
+gravity model =
+    { model
+        | vy = model.vy + deltaTime * -500
+    }
+
+
+physics : Model -> Model
+physics model =
+    { model
+        | x = model.x + deltaTime * model.vx
+        , y = model.y + deltaTime * model.vy
     }
 
 
