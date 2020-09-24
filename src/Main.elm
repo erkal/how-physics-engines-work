@@ -13,13 +13,17 @@ main =
 
 type alias Model =
     { x : Float
+    , y : Float
     , vx : Float
+    , vy : Float
     }
 
 
 initialModel =
     { x = 0
+    , y = 0
     , vx = 0
+    , vy = 0
     }
 
 
@@ -32,12 +36,10 @@ deltaTime =
 
 
 update computer model =
-    { x =
-        --change in location = change in time * speed
-        model.x + deltaTime * model.vx
-    , vx =
-        --change in speed = change in time * accelaration
-        model.vx + deltaTime * (toX computer.keyboard * 1000)
+    { x = model.x + deltaTime * model.vx
+    , y = model.y + deltaTime * model.vy
+    , vx = model.vx + deltaTime * (toX computer.keyboard * 1000)
+    , vy = model.vy + deltaTime * (toY computer.keyboard * 1000)
     }
 
 
@@ -51,4 +53,5 @@ view computer model =
         |> moveY 100
     , circle blue 20
         |> moveX model.x
+        |> moveY model.y
     ]
