@@ -32,8 +32,12 @@ deltaTime =
 
 
 update computer model =
-    { x = model.x + deltaTime * model.vx
-    , vx = model.vx + deltaTime * (toX computer.keyboard * 1000)
+    { x =
+        --change in location = change in time * speed
+        model.x + deltaTime * model.vx
+    , vx =
+        --change in speed = change in time * accelaration
+        model.vx + deltaTime * (toX computer.keyboard * 1000)
     }
 
 
