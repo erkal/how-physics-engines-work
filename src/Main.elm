@@ -11,6 +11,10 @@ floorY =
     -300
 
 
+radius =
+    20
+
+
 
 -- MODEL
 
@@ -43,6 +47,7 @@ update computer model =
     model
         |> applyKeyboard computer
         |> gravity
+        |> bounce
         |> physics
 
 
@@ -61,6 +66,15 @@ gravity model =
     }
 
 
+bounce : Model -> Model
+bounce model =
+    if model.y - radius < floorY then
+        { model | vy = -0.9 * model.vy }
+
+    else
+        model
+
+
 physics : Model -> Model
 physics model =
     { model
@@ -77,9 +91,10 @@ view : Computer -> Model -> List Shape
 view computer model =
     [ words black "press arrow keys to move the ball"
         |> moveY 100
-    , circle blue 20
+    , circle blue radius
         |> moveX model.x
         |> moveY model.y
     , rectangle brown 1000 30
+        |> moveY -15
         |> moveY floorY
     ]
