@@ -6,15 +6,11 @@ Explaining the basics of physics engines using elm-playground
 
 ## How to run the code
 
-You have to have elm installed. If you have yarn installed, you can do it via
-
-```
-yarn global add elm
-```
+You have to have [elm installed](https://guide.elm-lang.org/install/elm.html).
 
 Then, you can clone the repo and run elm-reactor as follows
 
-```
+```bash
 git clone https://github.com/erkal/how-physics-engines-work.git
 cd how-physics-engines-work.git
 elm reactor
