@@ -12,7 +12,7 @@ Then, you can clone the repo and run elm-reactor as follows
 
 ```bash
 git clone https://github.com/erkal/how-physics-engines-work.git
-cd how-physics-engines-work.git
+cd how-physics-engines-work
 elm reactor
 ```
 
